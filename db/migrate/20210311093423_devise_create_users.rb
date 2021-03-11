@@ -4,9 +4,21 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
       ## Database authenticatable
+      t.string :nickname,null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-
+      t.text :profile,null: false
+      t.string :dream,null: false
+      t.integer :first_limit_id,null: false
+      t.string :first_process,null: false
+      t.integer :second_limit_id,null: false
+      t.string :second_process,null: false
+      t.integer :third_limit_id,null: false
+      t.string :third_process,null: false
+      t.integer :fourth_limit_id,null: false
+      t.string :fourth_process
+      t.integer :fifth_limit_id, null:false
+      t.string :fifth_process
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
