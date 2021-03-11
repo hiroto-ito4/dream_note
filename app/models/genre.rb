@@ -5,4 +5,7 @@ class Genre < ActiveHash::Base
     { id: 3, name: '質問' },
     { id: 4, name: 'その他' },
   ]
+
+  include ActiveHash::Associations
+  has_many :users
 end
