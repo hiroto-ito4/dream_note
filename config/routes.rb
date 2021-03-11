@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to : "actions#index"
+  get 'actions/index'
+  root to: "actions#index"
 end
