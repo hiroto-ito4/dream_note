@@ -19,8 +19,8 @@
           </div>
           <% if user_signed_in? %>
             <div class="nav_right">
-              <%= link_to "ログアウト", user_registration_path, method: :delete ,class: :nav_logout %>
-              <%= link_to "New アクション！",root_path, class: :nav_btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: :nav_logout %>
+              <%= link_to "New アクション！", root_path, class: :nav_btn %>
             </div>
           <% else %>
             <div class="nav_right">
