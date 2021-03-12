@@ -1,0 +1,96 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+.header {
+  background-color: darkgray;
+  padding: 20px 0;
+}
+
+.inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 250px;
+  font-size: 2em;
+}
+
+.nav_btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1em;
+  color: black ;
+  text-decoration: none;
+  user-select: none;
+  border: 1px black solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+.nav_logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1em;
+  color: blue;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* フッター */
+.footer {
+  background-color:darkgray;
+  padding: 20px 0;
+}
+.copyright {
+  text-align: center;
+  color: black;
+  font-size: 1em;
+}
+
+/* メイン */
+.main {
+  width: 100%;
+  background-color: dodgerblue;
+  height: 800px;
+}

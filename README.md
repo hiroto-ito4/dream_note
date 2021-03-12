@@ -65,9 +65,9 @@ aaaaaaa
 | second_process     | string  | null: false              |
 | third_limit_id     | integer | null: false              |
 | third_process      | string  | null: false              |
-| fourth_limit_id    | integer |                          |
+| fourth_limit_id    | integer | null: false              |
 | fourth_process     | string  |                          |
-| fifth_limit_id     | integer |                          |
+| fifth_limit_id     | integer | null: false              |
 | fifth_process      | string  |                          |
 
 #### Association
