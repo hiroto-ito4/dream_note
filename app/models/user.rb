@@ -18,4 +18,5 @@ class User < ApplicationRecord
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :limits  #保留
+  has_many :actions
 end
