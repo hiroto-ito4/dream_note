@@ -19,5 +19,5 @@ class User < ApplicationRecord
     validates :fifth_process
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
-  has_many :genres  #保留
+  has_many :limits  #保留
 end
