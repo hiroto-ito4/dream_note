@@ -14,9 +14,7 @@ class User < ApplicationRecord
     validates :third_limit_id, numericality: { other_than: 1 } 
     validates :third_process
     validates :fourth_limit_id, numericality: true
-    validates :fourth_process
     validates :fifth_limit_id, numericality: true
-    validates :fifth_process
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :limits  #保留
