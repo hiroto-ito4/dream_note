@@ -5,6 +5,7 @@ class ActionsController < ApplicationController
   end
 
   def new
+    @action = Action.new
   end
 
   def create
