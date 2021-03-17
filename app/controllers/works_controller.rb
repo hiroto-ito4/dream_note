@@ -18,6 +18,8 @@ class WorksController < ApplicationController
     end
   end
 
+  def show
+  end
 
   private
 
