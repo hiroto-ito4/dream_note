@@ -1,1 +1,45 @@
-<h1>show</h1>
+<main class="hoge">
+  <div class="hoge">
+    <div class="hoge">
+      <p class="hoge">
+        <%= (@work.title) %>
+      </p>
+      <%= link_to "by#{@work.user.nickname}", root_path(@work.user.id), class: :hoge %>
+      <% if user_signed_in? && current_user.id == @work.user_id %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", root_path(@work.id), class: :hoge %>
+          <%= link_to "削除する", root_path(@work.id), method: :delete,class: :hoge %>
+        </div>
+      <% end %>
+      <div class="hoge">
+        <%= image_tag(@work.image)%>
+      </div>
+      <div class="hoge">
+        <div class="hoge">
+          <p class="hoge">投稿内容</p>
+          <p class="hoge">
+            <%= (@work.genre.name) %>
+          </p>
+        <div class="hoge">
+          <p class="hoge">タイトル</p>
+          <p class="hoge">
+            <%= (@work.title) %>
+          </p>
+        </div>
+        <div class="hoge">
+          <p class="hoge">内容</p>
+          <p class="hoge">
+            <%= (@work.content) %>
+          </p>
+        </div>
+        <div class="hoge">
+          <p class="hoge"> 感想</p>
+          <p class="hoge">
+            <%= (@work.inpression) %>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
