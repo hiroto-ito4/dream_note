@@ -1,5 +1,9 @@
-<h1>新規投稿</h1>
-<%= form_with model: @prototype, local: true do |f|%>
+<%= form_with model: @work,local: true do |f| %>
+
+  <div class="field">
+    <%= f.label :image, "画像があれば添付してください" %><br />
+    <%= f.file_field :image %>
+  </div>
 
   <div class="field">
     <%= f.label :投稿内容を選択してください%><br />
@@ -24,5 +28,4 @@
   <div class="actions">
     <%= f.submit "投稿する", class: :hoge %>
   </div>
-
 <% end %>

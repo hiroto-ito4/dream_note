@@ -1,15 +1,15 @@
-class Action < ApplicationRecord
-
+class Work < ApplicationRecord
   with_options presence: true do
     validates :genre_id, numericality: { other_than: 1 } 
     validates :title
     validates :content
     validates :inpression
-    validates :user_id
   end
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :genre
   belongs_to :user
   has_one_attached :image
-  belongs_to :genre
+  
 end
 
