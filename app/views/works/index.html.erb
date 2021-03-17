@@ -6,4 +6,5 @@
         <%= link_to "#{current_user.nickname}さん", class: :hoge%>
       </div>
     <% end %>
+  <%= render partial: 'work' , collection: @works %>
 </main>
