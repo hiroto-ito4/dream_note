@@ -71,10 +71,10 @@ aaaaaaa
 | fifth_process      | string  |                          |
 
 #### Association
-- has_many : actions
+- has_many : works
 - has_many : comments
 
-### actionsテーブル
+### worksテーブル
 
 | Column       | Type       | Options                        |
 |--------------|------------|--------------------------------|
@@ -99,5 +99,5 @@ aaaaaaa
 
 #### Association
 - belongs_to : user
-- belongs_to : action
+- belongs_to : work
 
