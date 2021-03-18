@@ -7,7 +7,7 @@
       <%= link_to "by#{@work.user.nickname}", root_path(@work.user.id), class: :hoge %>
       <% if user_signed_in? && current_user.id == @work.user_id %>
         <div class="prototype__manage">
-          <%= link_to "編集する", root_path(@work.id), class: :hoge %>
+          <%= link_to "編集する", edit_work_path(@work.id), class: :hoge %>
           <%= link_to "削除する", root_path(@work.id), method: :delete,class: :hoge %>
         </div>
       <% end %>
