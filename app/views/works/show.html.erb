@@ -8,7 +8,7 @@
       <% if user_signed_in? && current_user.id == @work.user_id %>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_work_path(@work.id), class: :hoge %>
-          <%= link_to "削除する", root_path(@work.id), method: :delete,class: :hoge %>
+          <%= link_to "削除する", work_path(@work.id), method: :delete ,class: :hoge %>
         </div>
       <% end %>
       <div class="hoge">
