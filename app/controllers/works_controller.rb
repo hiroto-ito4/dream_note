@@ -14,7 +14,7 @@ class WorksController < ApplicationController
     if @work.save
       redirect_to root_path
     else
-      render :edit
+      render :new
     end
   end
 
@@ -23,9 +23,16 @@ class WorksController < ApplicationController
   end
 
   def edit
+    @work = Work.find(params[:id])
   end
 
   def update
+    @work = Work.find(params[:id])
+    if @work.update(work_params)
+      redirect_to work_path
+    else
+      render :edit
+    end
   end
 
 
