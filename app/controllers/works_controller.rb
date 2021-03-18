@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :move_to_index, except: [:index]
+  before_action :move_to_index, except: [:index,:show]
 
   def index
     @works = Work.all
@@ -21,6 +21,13 @@ class WorksController < ApplicationController
   def show
     @work = Work.find(params[:id])
   end
+
+  def edit
+  end
+
+  def update
+  end
+
 
   private
 
