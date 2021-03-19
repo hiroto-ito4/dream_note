@@ -20,5 +20,5 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :limits  
   has_many :works
-  has_many :comments
+  has_many :comment
 end
