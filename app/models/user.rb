@@ -16,6 +16,9 @@ class User < ApplicationRecord
     validates :fourth_limit_id, numericality: true
     validates :fifth_limit_id, numericality: true
   end
+
   extend ActiveHash::Associations::ActiveRecordExtensions
-  has_many :limits  #保留
+  has_many :limits  
+  has_many :works
+  has_many :comment
 end

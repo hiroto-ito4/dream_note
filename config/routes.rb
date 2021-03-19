@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'actions/index'
-  root to: "actions#index"
+  root to: "works#index"
+  resources :works do
+    resources :comments, only: :create
+  end
+  resources :users, only: :show
 end
