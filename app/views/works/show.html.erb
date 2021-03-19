@@ -57,7 +57,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.reaction %>
-              <%= link_to (comment.user.nickname), root_path, class: :comment_user %>
+              <%= link_to (comment.user.nickname),  "/users/#{current_user.id}", class: :comment_user %>
             </li>
           <% end %>
         </ul>
