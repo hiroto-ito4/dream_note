@@ -1,43 +1,87 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">ユーザー情報変更ページ</h2>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %> 
+        <div class="regnew__field">
+          <div class= "first__field">
+          <label class="form-text">ユーザー情報・プロフィール</label><br />
+          <label class="form-text">「夢」を書きましょう</label>
+            <div class="field">
+              <%= f.label :"ニックネームを入力ください(必須)" %><br />
+              <%= f.text_field :nickname, autocomplete: "new-nickname" %>
+            </div>
+  
+            <div class="profire_field">
+              <%= f.label :"プロフィールを入力してください(必須)" %><br />
+              <%= f.text_area :profile,autocomplete: "new-profile",rows:"7",cols:"40" %>
+            </div>
+  
+            <div class="field">
+              <%= f.label :"あなたの夢を教えてください(必須)" %><br />
+              <%= f.text_field :dream, autocomplete: "new-dream"%>
+            </div>
+          </div>
+    
+          <div class="second__field">
+            <label class="form-text">「夢」を叶えるために</label><br />
+            <label class="form-text">いつまでに何をやるか、３つ以上書いてみましょう</label>
+            <div class="field">
+              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.collection_select(:first_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
+            </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="field">
+              <%= f.label :"何をやるか書きましょう(必須)" %><br />
+              <%= f.text_field :first_process, autocomplete: "new-process" %>
+            </div>
+ 
+            <div class="field">
+              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.collection_select(:second_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
+            </div>
+  
+            <div class="field">
+              <%= f.label :"何をやるか書きましょう(必須)"%><br />
+              <%= f.text_field :second_process, autocomplete: "new-process" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <div class="field">
+              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.collection_select(:third_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
+            </div>
+  
+            <div class="field">
+              <%= f.label :"何をやるか書きましょう(必須)" %><br />
+              <%= f.text_field :third_process, autocomplete: "new-process" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :いつまでに%><br />
+              <%= f.collection_select(:fourth_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
+            </div>
+  
+             <div class="field">
+              <%= f.label :何をやるか書きましょう %><br />
+              <%= f.text_field :fourth_process, autocomplete: "new-process" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :いつまでに%><br />
+              <%= f.collection_select(:fifth_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
+            </div>
+  
+            <div class="field">
+              <%= f.label :何をやるか書きましょう %><br />
+              <%= f.text_field :fifth_process, autocomplete: "new-process" %>
+            </div>
+          </div>
+        </div>
+          <div class="btn">
+            <%= f.submit "編集終了", class:"red-btn"%>
+          </div>
+        <% end %>
+    </div>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
