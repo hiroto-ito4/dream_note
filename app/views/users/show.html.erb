@@ -4,6 +4,11 @@
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんの情報"%>
       </h2>
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <div class="users__manage">
+          <%= link_to "編集する",edit_user_registration_path(@user.id), class: :users__btn %>
+        </div>
+      <% end %>
       <table class="table">
         <tbody>
           <tr>
@@ -76,7 +81,7 @@
         <%= "#{@user.nickname}さんの投稿"%>
       </h2>
       <div class="user__card">
-        <%= render partial: "works/work", collection: @works %>
+        <%= render partial: "works/work", collection: @work %>
       </div>
     </div>
   </div>

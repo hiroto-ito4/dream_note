@@ -1,63 +1,62 @@
-<main class="hoge">
-  <div class="hoge">
-    <div class="hoge">
-      <p class="hoge">
-        <%= (@work.title) %>
-      </p>
-      <%= link_to "by#{@work.user.nickname}", root_path(@work.user.id), class: :hoge %>
+<main class="main">
+  <div class="inner">
+    <div class="work__wrapper">
+      <%= link_to "#{@work.user.nickname}さんの投稿", root_path(@work.user.id), class: :work__user %>
       <% if user_signed_in? && current_user.id == @work.user_id %>
-        <div class="prototype__manage">
-          <%= link_to "編集する", edit_work_path(@work.id), class: :hoge %>
-          <%= link_to "削除する", work_path(@work.id), method: :delete ,class: :hoge %>
+        <div class="work__manage">
+          <%= link_to "編集する", edit_work_path(@work.id), class: :work__btn %>
+          <%= link_to "削除する", work_path(@work.id), method: :delete ,class: :work__btn %>
         </div>
       <% end %>
-      <div class="hoge">
+      <div class="work__image">
         <%= image_tag(@work.image)%>
       </div>
-      <div class="hoge">
-        <div class="hoge">
-          <p class="hoge">投稿内容</p>
-          <p class="hoge">
+      <div class="work__body">
+        <div class="work__detail">
+          <p class="detail__title">投稿内容</p>
+          <p class="detail__message">
             <%= (@work.genre.name) %>
           </p>
-        <div class="hoge">
-          <p class="hoge">タイトル</p>
-          <p class="hoge">
+        <div class="work__detail">
+          <p class="detail__title">タイトル</p>
+          <p class="detail__message">
             <%= (@work.title) %>
           </p>
         </div>
-        <div class="hoge">
-          <p class="hoge">内容</p>
-          <p class="hoge">
+        <div class="work__detail">
+          <p class="detail__title">内容</p>
+          <p class="detail__message">
             <%= (@work.content) %>
           </p>
         </div>
-        <div class="hoge">
-          <p class="hoge"> 感想</p>
-          <p class="hoge">
+        <div class="work__detail">
+          <p class="detail__title"> 感想</p>
+          <p class="detail__message">
             <%= (@work.inpression) %>
           </p>
         </div>
-     <div class="prototype__comments">
+     <div class="work__comments">
         <% if user_signed_in? %>
           <%= form_with(model:[@work, @comment], local: true) do |f|%>
             <div class="field">
-              <%= f.label :reaction, "コメント" %><br />
-              <%= f.text_field :reaction %>
+              <%= f.label :reaction, "コメントを入力して送信ボタンを押してください（50文字以下)" %><br />
+              <%= f.text_field :reaction ,size:"90", maxlength:"50"%>
             </div>
-            <div class="actions">
-              <%= f.submit "送信する" ,class: :form__btn %>
+            <div class="btn">
+              <%= f.submit "送信する" ,class: "red-btn" %>
             </div>
           <% end %> 
         <% else %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <div class="not-rog">
+          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <div>
         <% end %>
 
         <ul class="comments_lists">
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.reaction %>
-              <%= link_to (comment.user.nickname),  "/users/#{current_user.id}", class: :comment_user %>
+              <%= link_to "#{comment.user.nickname}さんのコメント",root_path(@work.user.id), class: :comment_user %>
             </li>
           <% end %>
         </ul>

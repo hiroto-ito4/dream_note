@@ -36,12 +36,12 @@ a {
 
 /* ヘッダー */
 .header {
-  background-color: darkgray;
+  background-color:rgb(21, 21, 51);
   padding: 20px 0;
 }
 
 .inner {
-  width: 1000px;
+  width: 1050px;
   margin: 0 auto;
 }
 
@@ -54,43 +54,448 @@ a {
 .logo {
   width: 250px;
   font-size: 2em;
+  color: white;
 }
 
 .nav_btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 1em;
-  color: black ;
+  color:white ;
   text-decoration: none;
   user-select: none;
-  border: 1px black solid;
+  border: 1px ;
   border-radius: 3px;
   transition: 0.4s ease;
+  background: red;
+}
+.nav_btn:hover{
+  color: #fff;
+  background:violet;
 }
 
 .nav_logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 1em;
-  color: blue;
+  color:white; 
   text-decoration: none;
   user-select: none;
+  border: 1px ;
+}
+.nav_logout:hover{
+  color: #fff;
+  background:violet;
+}
+
+.nav_mypage{ 
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1em;
+  color:white ;
+  text-decoration: none;
+  user-select: none;
+  border: 1px ;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  background: red;
+}
+.nav_mypage:hover{
+  color: #fff;
+  background:violet;
 }
 
 /* フッター */
 .footer {
-  background-color:darkgray;
+  background-color:rgb(21, 21, 51);
   padding: 20px 0;
 }
 .copyright {
   text-align: center;
-  color: black;
+  color:white;
   font-size: 1em;
 }
 
 /* メイン */
+  /* トップページ */
 .main {
   width: 100%;
-  background-color: dodgerblue;
-  height: 800px;
+  background-color: rgb(37, 37, 78);
+  height: 100%;
 }
+
+.greeting{
+  color: white;
+  margin-bottom: 50px ;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.rog_name{
+  color: white;
+  text-decoration: underline;
+}
+
+.all_works{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
+
+.card {
+  width: calc((100% - 20px) / 3);
+  margin-bottom: 40px;
+  background-color:rgb(43, 43, 85);
+}
+
+.card__img {
+  margin-bottom: 16px;
+}
+
+.card__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+.card__summary {
+  font-size: 16px;
+}
+
+.card__user {
+  display: block;
+  font-size: 12px;
+  color: white;
+  text-align: right;
+  text-decoration: underline;
+}
+
+  /* ログイン画面 */
+
+.form-wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(37, 37, 78);
+  padding-bottom: 100px;
+}
+
+.form-header {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-header-text {
+  line-height: 100px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+  color:white
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.btn { /*新規登録画面でも使用*/
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px; 
+}
+
+.red-btn { /*新規登録画面でも使用*/
+  width: 100%;
+  background: #ea352d;
+  border: 1px;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.red-btn:hover{
+  color: #fff;
+  background:violet;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
+.indispensable{
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+  /* 新規登録画面 */
+
+.form__wrapper{
+  min-height: calc(100vh - 161px);
+}
+
+.field{
+  margin: 30px 0;
+  color: white;
+}
+
+.actions{
+  padding: 20px 0 40px 0;
+}
+
+.first__field{
+  width: 100%;
+  text-align: center;
+}
+
+.second__field{
+  width: 100%;
+  text-align: center;
+}
+
+.page-heading{
+  padding: 20px 0 0 0;
+  margin-bottom: 20px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.regnew__field{
+  display: flex;
+}
+
+.form-text{
+  font-size: 16px;
+}
+
+.profire_field{
+  margin: 15px 0;
+  color: white;
+  width: 100%;
+}
+
+  /* 詳細ページ*/
+  .work__wrapper{
+    min-height: calc(100vh - 161px);
+  }
+
+  .work__user{
+    display: block;
+    font-size: 16px;
+    color:white;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 20px;
+  }
+
+  .work__image{
+    width: 40%;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+
+  .detail__title{
+    color: white;
+    font-size: 20px;
+    padding: 15px 0;
+  }
+
+  .detail__message{
+    color: white;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .work__detail{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(43, 43, 85); 
+  }
+
+  .work__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .work__manage{
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+  }
+
+  .work__btn{
+    display: block;
+    padding: 0.4em 1.6em;
+    font-size: 1em;
+    color:white;
+    text-decoration: none;
+    user-select: none;
+    border: 1px ;
+    border-radius: 3px;
+    transition: 0.4s ease;
+    margin: 0 20px;
+    background: red;
+  }
+  .work__btn:hover{
+    color: #fff;
+    background:violet;
+  }
+  
+  .work__comments{
+    background-color:rgb(54, 54, 100); 
+    padding: 20px;
+    margin: 28px 0 40px 0;
+    text-align: center;
+  }
+  
+  .comments_lists{
+    padding-left: 20px;
+  }
+  
+  .comments_list{
+    list-style-type: square;
+    padding-bottom: 5px;
+    color: white;
+    list-style: none;
+  }
+  
+  .comment_user{
+    font-size: 10px;
+    color: white;
+    text-decoration: underline;
+  }
+  
+  /* ユーザー詳細ページ 編集ページ */
+  .user__wrapper{
+    min-height: calc(100vh - 161px);
+  }
+  .table{
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .table__col1{
+    font-weight: bold;
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+    width: 45%;
+    padding: 8px;
+    color: white;
+    text-align: center;
+  }
+  .table__col2{
+    border: 1px solid #f5f5f5;
+    border-collapse: collapse;
+    width: 55%;
+    padding: 16px 8px;
+    color: white;
+  }
+  .user__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .not-rog{
+    color: white;
+  }
+
+  .users__manage{
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  /* 投稿フォーム */
+
+  .new-title{
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+  }
+
+  .img-upload {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2vh 0;
+  }
+
+  .click-upload {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .click-image{
+    color: white;
+    justify-content: center;
+    padding:15px 0;
+  }
+
+  .form_field{
+    text-align: center;
+  }
+  .f_field{
+    margin: 30px 0;
+    color: white;
+  }
+  
+  .f_actions{
+    padding: 20px 0 40px 0;
+  }
+
+  .users__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1em;
+  color:white ;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  }
