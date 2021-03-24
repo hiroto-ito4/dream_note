@@ -2,7 +2,7 @@ class WorksController < ApplicationController
   before_action :move_to_index, except: [:index,:show]
 
   def index
-    @works = Work.all
+    @works = Work.all.order('created_at DESC')
   end
 
   def new
