@@ -231,7 +231,7 @@ a {
   width: 25%;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 30px; 
+  padding-bottom: 30px; 
 }
 
 .red-btn { /*新規登録画面でも使用*/
@@ -497,5 +497,9 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
   background: #ea352d;
-  border: 1px solid #ea352d;
+  border: 1px ;
+  }
+  .users__btn:hover{
+    color: #fff;
+    background:violet;
   }
