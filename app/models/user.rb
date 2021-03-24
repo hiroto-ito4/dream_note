@@ -7,11 +7,11 @@ class User < ApplicationRecord
     validates :nickname
     validates :profile
     validates :dream
-    validates :first_limit_id, numericality: { other_than: 1 } 
+    validates :first_limit_id, numericality: { other_than: 1 ,message: 'やるのかを選択しましょう'} 
     validates :first_process
-    validates :second_limit_id, numericality: { other_than: 1 } 
+    validates :second_limit_id, numericality: { other_than: 1 ,message: 'やるのかを選択しましょう'} 
     validates :second_process
-    validates :third_limit_id, numericality: { other_than: 1 } 
+    validates :third_limit_id, numericality: { other_than: 1 ,message: 'やるのかを選択しましょう'} 
     validates :third_process
     validates :fourth_limit_id, numericality: true
     validates :fifth_limit_id, numericality: true

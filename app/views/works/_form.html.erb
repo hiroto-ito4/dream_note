@@ -1,5 +1,7 @@
 <%= form_with model: @work,local: true do |f| %>
 
+<%= render partial:"shared/error_messages", locals: { model: f.object} %>
+
 <div class="img-upload">
   <div class="click-upload">
     <%= f.label :image, "画像があれば添付してください",class: "click-image"%><br />

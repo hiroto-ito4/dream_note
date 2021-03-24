@@ -328,9 +328,10 @@ a {
   }
 
   .detail__title{
-    color: white;
+    color:red;
     font-size: 20px;
     padding: 15px 0;
+    
   }
 
   .detail__message{
@@ -505,3 +506,24 @@ a {
     background:violet;
   }
 
+  /*  エラーメッセージの表示 */
+
+  .error-alert {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+  }
+  
+  .error-message {
+    font-size: 1.3vw;
+    color: rgb(182, 48, 0);
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+
+  .error-count{
+    color: rgb(37, 37, 78);
+  }
+
+ 

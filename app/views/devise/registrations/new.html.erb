@@ -46,52 +46,52 @@
             <label class="form-text">「夢」を叶えるために</label><br />
             <label class="form-text">いつまでに何をやるか、３つ以上書いてみましょう</label>
             <div class="field">
-              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.label :"①いつまでに(必須)"%><br />
               <%= f.collection_select(:first_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
 
             <div class="field">
-              <%= f.label :"何をやるか書きましょう(必須)" %><br />
+              <%= f.label :"①何をやるか書きましょう(必須)" %><br />
               <%= f.text_field :first_process, autocomplete: "new-process" %>
             </div>
  
             <div class="field">
-              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.label :"②いつまでに(必須)"%><br />
               <%= f.collection_select(:second_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
             <div class="field">
-              <%= f.label :"何をやるか書きましょう(必須)"%><br />
+              <%= f.label :"②何をやるか書きましょう(必須)"%><br />
               <%= f.text_field :second_process, autocomplete: "new-process" %>
             </div>
 
             <div class="field">
-              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.label :"③いつまでに(必須)"%><br />
               <%= f.collection_select(:third_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
             <div class="field">
-              <%= f.label :"何をやるか書きましょう(必須)" %><br />
+              <%= f.label :"③何をやるか書きましょう(必須)" %><br />
               <%= f.text_field :third_process, autocomplete: "new-process" %>
             </div>
 
             <div class="field">
-              <%= f.label :いつまでに%><br />
+              <%= f.label :④いつまでに%><br />
               <%= f.collection_select(:fourth_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
              <div class="field">
-              <%= f.label :何をやるか書きましょう %><br />
+              <%= f.label :④何をやるか書きましょう %><br />
               <%= f.text_field :fourth_process, autocomplete: "new-process" %>
             </div>
 
             <div class="field">
-              <%= f.label :いつまでに%><br />
+              <%= f.label :⑤いつまでに%><br />
               <%= f.collection_select(:fifth_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
             <div class="field">
-              <%= f.label :何をやるか書きましょう %><br />
+              <%= f.label :⑤何をやるか書きましょう %><br />
               <%= f.text_field :fifth_process, autocomplete: "new-process" %>
             </div>
           </div>

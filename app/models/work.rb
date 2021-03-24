@@ -1,6 +1,6 @@
 class Work < ApplicationRecord
   with_options presence: true do
-    validates :genre_id, numericality: { other_than: 1 } 
+    validates :genre_id, numericality: { other_than: 1 ,message: 'を選択しましょう'} 
     validates :title
     validates :content
     validates :inpression
