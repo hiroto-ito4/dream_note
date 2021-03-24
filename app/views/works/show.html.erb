@@ -8,8 +8,14 @@
           <%= link_to "削除する", work_path(@work.id), method: :delete ,class: :work__btn %>
         </div>
       <% end %>
+
+      <% if @work.image.present? %>
       <div class="work__image">
         <%= image_tag(@work.image)%>
+      <% else %>
+      <div class="work__image">
+        <%= image_tag "no_image.png"%>
+      <% end %>
       </div>
       <div class="work__body">
         <div class="work__detail">
