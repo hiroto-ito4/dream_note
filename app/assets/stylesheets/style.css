@@ -387,6 +387,7 @@ a {
   
   .comments_lists{
     padding-left: 20px;
+    color: white;
   }
   
   .comments_list{
@@ -503,3 +504,4 @@ a {
     color: #fff;
     background:violet;
   }
+
