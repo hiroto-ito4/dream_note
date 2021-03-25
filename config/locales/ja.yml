@@ -5,12 +5,12 @@ ja:
        nickname: ニックネーム
        profile: プロフィール
        dream: 夢
-       first_limit_id: ①いつまでに
-       first_process: ①何をやるか
-       second_limit_id: ②いつまでに
-       second_process: ②何をやるか
-       third_limit_id: ③いつまでに
-       third_process: ③何をやるか
+       first_limit_id: ①のいつまでに
+       first_process: ①の何をやるか
+       second_limit_id: ②のいつまでに
+       second_process: ②の何をやるか
+       third_limit_id: ③のいつまでに
+       third_process: ③の何をやるか
      work:
        genre_id: 投稿内容
        title: アクションのタイトル

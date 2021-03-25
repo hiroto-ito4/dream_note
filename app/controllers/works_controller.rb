@@ -1,5 +1,6 @@
 class WorksController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
   before_action :set_work, only: [:show, :edit, :update]
 
   def index
@@ -47,7 +48,8 @@ class WorksController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless user_signed_in?
+    @work = Work.find(params[:id])
+    redirect_to action: :index if current_user.id != @work.user_id
   end
 
   def set_work
