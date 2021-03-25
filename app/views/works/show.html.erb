@@ -1,7 +1,7 @@
 <main class="main">
   <div class="inner">
     <div class="work__wrapper">
-      <%= link_to "#{@work.user.nickname}さんの投稿", root_path(@work.user.id), class: :work__user %>
+      <%= link_to "#{@work.user.nickname}さんの投稿", user_path(@work.user.id), class: :work__user %>
       <% if user_signed_in? && current_user.id == @work.user_id %>
         <div class="work__manage">
           <%= link_to "編集する", edit_work_path(@work.id), class: :work__btn %>

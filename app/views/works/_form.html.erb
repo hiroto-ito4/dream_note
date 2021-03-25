@@ -17,17 +17,17 @@
 
   <div class="f_field">
     <%= f.label :'アクションのタイトルをつけましょう(必須)※50文字以下' %><br />
-    <%= f.text_field :title, class: :w_title ,size:"50" %>
+    <%= f.text_field :title, class: :w_title ,size:"50" , maxlength:"50"%>
   </div>
 
   <div class="f_field">
     <%= f.label :'アクションの内容を書きましょう(必須)※250文字以下' %><br />
-    <%= f.text_area :content, class: :w_content ,rows:"5",cols:"50" %>
+    <%= f.text_area :content, class: :w_content ,rows:"5",cols:"50", maxlength:"250"%>
   </div>
   
   <div class="f_field">
     <%= f.label :'アクションに対する感想を残しましょう(必須)※250文字以下' %><br />
-    <%= f.text_area :inpression, class: :w_inpression ,rows:"5",cols:"50" %>
+    <%= f.text_area :inpression, class: :w_inpression ,rows:"5",cols:"50", maxlength:"250" %>
   </div>
 
   <div class="btn">
