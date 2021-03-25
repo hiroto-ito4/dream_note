@@ -14,13 +14,12 @@ class User < ApplicationRecord
     validates :third_limit_id, numericality: { other_than: 1, message: 'やるのかを選択しましょう' }
     validates :third_process, length: { maximum: 20 }
     validates :fourth_limit_id, numericality: true
-    
   end
 
   validates :fourth_process, length: { maximum: 20 }
-  validates :fourth_limit_id, presence:true, numericality: true
+  validates :fourth_limit_id, presence: true, numericality: true
   validates :fifth_process, length: { maximum: 20 }
-  validates :fifth_limit_id, presence:true,numericality: true
+  validates :fifth_limit_id, presence: true, numericality: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :limits
