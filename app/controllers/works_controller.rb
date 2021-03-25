@@ -1,5 +1,6 @@
 class WorksController < ApplicationController
-  before_action :move_to_index, except: [:index,:show]
+  before_action :move_to_index, except: [:index, :show]
+  before_action :set_work, only: [:show, :edit, :update]
 
   def index
     @works = Work.all.order('created_at DESC')
@@ -19,17 +20,14 @@ class WorksController < ApplicationController
   end
 
   def show
-    @work = Work.find(params[:id])
     @comment = Comment.new
     @comments = @work.comments.includes(:user)
   end
 
   def edit
-    @work = Work.find(params[:id])
   end
 
   def update
-    @work = Work.find(params[:id])
     if @work.update(work_params)
       redirect_to work_path
     else
@@ -38,11 +36,9 @@ class WorksController < ApplicationController
   end
 
   def destroy
-    work = Work.find(params[:id])
     work.destroy
     redirect_to root_path
   end
-
 
   private
 
@@ -51,10 +47,10 @@ class WorksController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 
+  def set_work
+    @work = Work.find(params[:id])
+  end
 end
-

@@ -43,7 +43,7 @@
         </div>
      <div class="work__comments">
         <% if user_signed_in? %>
-          <%= form_with(model:[@work, @comment], local: true) do |f|%>
+          <%= form_with(model:[@work, @comment]) do |f|%>
             <div class="field">
               <%= f.label :reaction, "コメントを入力して送信ボタンを押してください（50文字以下)" %><br />
               <%= f.text_field :reaction ,size:"90", maxlength:"50"%>

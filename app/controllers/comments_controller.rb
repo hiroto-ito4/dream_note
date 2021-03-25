@@ -6,13 +6,13 @@ class CommentsController < ApplicationController
     else
       @work = @comment.work
       @comments = @work.comments
-      render "works/show"
+      render 'works/show'
     end
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:reaction).merge(user_id: current_user.id, work_id: params[:work_id])
   end
-
 end
