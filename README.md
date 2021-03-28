@@ -13,10 +13,22 @@
 投稿に対して他者がコメントを行い、励ましや質問の回答をすることでモチベーションの維持や問題解決につなげていくことができます。
 
 ## App URL
-aaaaaaa
+
+https://dream-note.herokuapp.com/
 
 ## テスト用アカウント
-aaaaaaaa
+◯ID/Pass
+ ■ID: hiro4
+ ■Pass: 4444
+
+◯テスト用アカウント等
+ ■ユーザー１
+  ●メールアドレス:1@1
+  ●パスワード:111111
+ ■ユーザー２
+  ●メールアドレス:2@２
+  ●パスワード:111111
+
 
 ## 利用方法
 aaaaaaa
@@ -44,10 +56,23 @@ aaaaaaa
 aaaaaaa
 
 ## ローカルでの動作方法
-aaaaaaa
+% git clone https://github.com/hiroto-ito4/dream_note.git
+% cd dream_note
+% bundle install
+% rails db:create
+% rails db:migrate
+% rails s
+👉 http://localhost:3000
 
 ## 開発環境
-aaaaaaa
+VScode
+Ruby 2.6.5
+Rails 6.0.3.5
+mysql2 14.14
+JavaScript
+gem 3.0.3
+heroku 7.49.0
+
 
 ## DB設計
 ### usersテーブル
