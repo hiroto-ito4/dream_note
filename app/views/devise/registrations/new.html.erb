@@ -27,18 +27,18 @@
             </div>
 
             <div class="field">
-              <%= f.label :"ニックネームを入力ください(必須)" %><br />
-              <%= f.text_field :nickname, autocomplete: "new-nickname" %>
+              <%= f.label :"ニックネームを入力ください(必須) ※20文字以内" %><br />
+              <%= f.text_field :nickname, autocomplete: "new-nickname", maxlength:"20",size:"35" %>
             </div>
   
             <div class="profire_field">
-              <%= f.label :"プロフィールを入力してください(必須)" %><br />
-              <%= f.text_area :profile,autocomplete: "new-profile",rows:"7",cols:"40" %>
+              <%= f.label :"プロフィールを入力してください(必須) ※280文字以内" %><br />
+              <%= f.text_area :profile,autocomplete: "new-profile",rows:"7",cols:"40", maxlength:"280" %>
             </div>
   
             <div class="field">
-              <%= f.label :"あなたの夢を教えてください(必須)" %><br />
-              <%= f.text_field :dream, autocomplete: "new-dream"%>
+              <%= f.label :"あなたの夢を教えてください(必須) ※20文字以内" %><br />
+              <%= f.text_field :dream, autocomplete: "new-dream", maxlength:"20",size:"35" %>
             </div>
           </div>
     
@@ -46,53 +46,53 @@
             <label class="form-text">「夢」を叶えるために</label><br />
             <label class="form-text">いつまでに何をやるか、３つ以上書いてみましょう</label>
             <div class="field">
-              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.label :"①いつまでに(必須)"%><br />
               <%= f.collection_select(:first_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
 
             <div class="field">
-              <%= f.label :"何をやるか書きましょう(必須)" %><br />
-              <%= f.text_field :first_process, autocomplete: "new-process" %>
+              <%= f.label :"①何をやるか書きましょう(必須) ※20文字以内" %><br />
+              <%= f.text_field :first_process, autocomplete: "new-process", maxlength:"20",size:"35" %>
             </div>
  
             <div class="field">
-              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.label :"②いつまでに(必須)"%><br />
               <%= f.collection_select(:second_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
             <div class="field">
-              <%= f.label :"何をやるか書きましょう(必須)"%><br />
-              <%= f.text_field :second_process, autocomplete: "new-process" %>
+              <%= f.label :"②何をやるか書きましょう(必須) ※20文字以内"%><br />
+              <%= f.text_field :second_process, autocomplete: "new-process", maxlength:"20",size:"35" %>
             </div>
 
             <div class="field">
-              <%= f.label :"いつまでに(必須)"%><br />
+              <%= f.label :"③いつまでに(必須)"%><br />
               <%= f.collection_select(:third_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
             <div class="field">
-              <%= f.label :"何をやるか書きましょう(必須)" %><br />
-              <%= f.text_field :third_process, autocomplete: "new-process" %>
+              <%= f.label :"③何をやるか書きましょう(必須) ※20文字以内" %><br />
+              <%= f.text_field :third_process, autocomplete: "new-process", maxlength:"20",size:"35" %>
             </div>
 
             <div class="field">
-              <%= f.label :いつまでに%><br />
+              <%= f.label :④いつまでに%><br />
               <%= f.collection_select(:fourth_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
              <div class="field">
-              <%= f.label :何をやるか書きましょう %><br />
-              <%= f.text_field :fourth_process, autocomplete: "new-process" %>
+              <%= f.label :'④何をやるか書きましょう ※20文字以内' %><br />
+              <%= f.text_field :fourth_process, autocomplete: "new-process", maxlength:"20",size:"35" %>
             </div>
 
             <div class="field">
-              <%= f.label :いつまでに%><br />
+              <%= f.label :"⑤いつまでに"%><br />
               <%= f.collection_select(:fifth_limit_id, Limit.all, :id, :name, {}, {class:"select-box"}) %>
             </div>
   
             <div class="field">
-              <%= f.label :何をやるか書きましょう %><br />
-              <%= f.text_field :fifth_process, autocomplete: "new-process" %>
+              <%= f.label :'⑤何をやるか書きましょう ※20文字以内' %><br />
+              <%= f.text_field :fifth_process, autocomplete: "new-process", maxlength:"20",size:"35" %>
             </div>
           </div>
         </div>

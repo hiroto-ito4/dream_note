@@ -33,7 +33,7 @@ class Limit < ActiveHash::Base
     { id: 31, name: '19年後までに' },
     { id: 32, name: '20年後までに' },
     { id: 33, name: '25年後までに' },
-    { id: 34, name: '30年後までに' },
+    { id: 34, name: '30年後までに' }
   ]
 
   include ActiveHash::Associations

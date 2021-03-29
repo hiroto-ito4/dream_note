@@ -1,15 +1,21 @@
 <main class="main">
   <div class="inner">
     <div class="work__wrapper">
-      <%= link_to "#{@work.user.nickname}さんの投稿", root_path(@work.user.id), class: :work__user %>
+      <%= link_to "#{@work.user.nickname}さんの投稿", user_path(@work.user.id), class: :work__user %>
       <% if user_signed_in? && current_user.id == @work.user_id %>
         <div class="work__manage">
           <%= link_to "編集する", edit_work_path(@work.id), class: :work__btn %>
           <%= link_to "削除する", work_path(@work.id), method: :delete ,class: :work__btn %>
         </div>
       <% end %>
+
+      <% if @work.image.present? %>
       <div class="work__image">
         <%= image_tag(@work.image)%>
+      <% else %>
+      <div class="work__image">
+        <%= image_tag "no_image.png"%>
+      <% end %>
       </div>
       <div class="work__body">
         <div class="work__detail">
@@ -37,7 +43,7 @@
         </div>
      <div class="work__comments">
         <% if user_signed_in? %>
-          <%= form_with(model:[@work, @comment], local: true) do |f|%>
+          <%= form_with(model:[@work, @comment]) do |f|%>
             <div class="field">
               <%= f.label :reaction, "コメントを入力して送信ボタンを押してください（50文字以下)" %><br />
               <%= f.text_field :reaction ,size:"90", maxlength:"50"%>
@@ -53,12 +59,14 @@
         <% end %>
 
         <ul class="comments_lists">
-          <% @comments.each do |comment| %>
-            <li class="comments_list">
-              <%= comment.reaction %>
-              <%= link_to "#{comment.user.nickname}さんのコメント",root_path(@work.user.id), class: :comment_user %>
-            </li>
-          <% end %>
+          <div id='comments'>
+            <% @comments.reverse_each do |comment| %>
+              <li class="comments_list">
+                <%= comment.reaction %>
+                <%= link_to "#{comment.user.nickname}さんのコメント",root_path(@work.user.id), class: :comment_user %>
+              </li>
+            <% end %>
+          </div>
         </ul>
       </div>
     </div>
