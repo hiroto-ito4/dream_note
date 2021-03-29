@@ -520,31 +520,6 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
   background: #ea352d;
-  border: 1px ;
-  }
-  .users__btn:hover{
-    color: #fff;
-    background:violet;
-  }
 
-  /*  エラーメッセージの表示 */
-
-  .error-alert {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5vh;
+  border: 1px solid #ea352d;
   }
-  
-  .error-message {
-    font-size: 1.3vw;
-    color: rgb(182, 48, 0);
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 0;
-  }
-
-  .error-count{
-    color: rgb(37, 37, 78);
-  }
-
- 
