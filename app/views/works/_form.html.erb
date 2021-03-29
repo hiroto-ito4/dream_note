@@ -1,5 +1,7 @@
 <%= form_with model: @work,local: true do |f| %>
 
+<%= render partial:"shared/error_messages", locals: { model: f.object} %>
+
 <div class="img-upload">
   <div class="click-upload">
     <%= f.label :image, "画像があれば添付してください",class: "click-image"%><br />
@@ -9,23 +11,23 @@
 
 <div class ="form_field">
   <div class="f_field">
-    <%= f.label :投稿内容を選択してください%><br />
+    <%= f.label :'投稿内容を選択してください(必須)'%><br />
     <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class: :w_genle}) %>
   </div>
 
   <div class="f_field">
-    <%= f.label :アクションのタイトルをつけましょう %><br />
-    <%= f.text_field :title, class: :w_title ,size:"50" %>
+    <%= f.label :'アクションのタイトルをつけましょう(必須)※50文字以下' %><br />
+    <%= f.text_field :title, class: :w_title ,size:"50" , maxlength:"50"%>
   </div>
 
   <div class="f_field">
-    <%= f.label :アクションの内容を書きましょう %><br />
-    <%= f.text_area :content, class: :w_content ,rows:"5",cols:"50" %>
+    <%= f.label :'アクションの内容を書きましょう(必須)※250文字以下' %><br />
+    <%= f.text_area :content, class: :w_content ,rows:"5",cols:"50", maxlength:"250"%>
   </div>
   
   <div class="f_field">
-    <%= f.label :アクションに対する感想を残しましょう %><br />
-    <%= f.text_area :inpression, class: :w_inpression ,rows:"5",cols:"50" %>
+    <%= f.label :'アクションに対する感想を残しましょう(必須)※250文字以下' %><br />
+    <%= f.text_area :inpression, class: :w_inpression ,rows:"5",cols:"50", maxlength:"250" %>
   </div>
 
   <div class="btn">

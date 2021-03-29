@@ -7,11 +7,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     resource.update_without_password(params)
   end
 
-  def after_update_path_for(resource)
+  def after_update_path_for(_resource)
     user_path(current_user)
   end
   # before_action :configure_sign_up_params, only: [:create]
-  
+
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
