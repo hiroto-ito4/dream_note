@@ -241,7 +241,7 @@ a {
   width: 25%;
   margin: 0 auto;
   margin-top: 50px;
-  padding-bottom: 30px; 
+  padding-bottom: 50px; 
 }
 
 .red-btn { /*新規登録画面でも使用*/
@@ -471,6 +471,10 @@ a {
 
   /* 投稿フォーム */
 
+  .form_main{
+    height: 100%;
+  }
+
   .new-title{
     padding-top: 30px;
     width: 100%;
@@ -520,9 +524,9 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
   background: #ea352d;
-
   border: 1px solid #ea352d;
   }
+
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {
@@ -536,7 +540,7 @@ a {
     width: 48%;
     margin-bottom: 40px;
   }
-  .prototype_image{
+  .work_image{
     width: 60%;
   }
 }
@@ -559,11 +563,9 @@ a {
   .card__summary {
     font-size: 14px;
   }
-  .prototype_image{
+  .work_image{
     width: 100%;
   }
-  .table{
-    width: 100%;
-  }
+
 }
   
