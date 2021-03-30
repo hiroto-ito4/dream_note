@@ -253,6 +253,7 @@ a {
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 .red-btn:hover{
   color: #fff;
