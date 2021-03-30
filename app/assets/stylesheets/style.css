@@ -242,6 +242,7 @@ a {
   margin: 0 auto;
   margin-top: 50px;
   padding-bottom: 50px; 
+  -webkit-appearance: none;
 }
 
 .red-btn { /*新規登録画面でも使用*/
