@@ -319,6 +319,11 @@ a {
   width: 100%;
 }
 
+.error-message{
+  color: white;
+  text-align: center;
+}
+
   /* 詳細ページ*/
   .work__wrapper{
     min-height: calc(100vh - 161px);
