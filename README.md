@@ -2,6 +2,8 @@
 
 夢に向かって頑張る人のためのアプリケーション
 
+<img width="1285" alt="DreamNote 表紙" src="https://user-images.githubusercontent.com/78402245/113164815-69967480-927c-11eb-8b50-12ff5fec567f.png">
+
 ## 概要
 
 何かを目指すとき、仲間がいると頑張れませんか?
