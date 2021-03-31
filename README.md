@@ -20,8 +20,8 @@ https://dream-note.herokuapp.com/
 
 ## テスト用アカウント
 ◯ID/Pass  
- ■ID: hiro4  
- ■Pass: 4444  
+ ・ID: hiro4  
+ ・Pass: 4444  
 
 ◯テスト用アカウント等  
 ■ユーザー１  
