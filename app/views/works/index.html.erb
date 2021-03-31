@@ -1,5 +1,6 @@
 <main class="main">
    <div class="inner">
+      <div class= concept> 〜夢に向かって頑張る人のためのアプリケーション〜</div>
     <% if user_signed_in? %>
       <div class="greeting">
         <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: :rog_name%>

@@ -17,7 +17,6 @@
           <div class="nav_left">
             <%= link_to "Dream Note", root_path ,class: :logo %>
           </div>
-          <div class="nav_center">〜夢に向かって頑張る人のためのアプリケーション〜</div>
           <% if user_signed_in? %>
             <div class="nav_right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: :nav_logout %>

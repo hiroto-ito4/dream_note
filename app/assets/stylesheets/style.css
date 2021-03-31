@@ -57,6 +57,13 @@ a {
   color: white;
 }
 
+.nav_center{
+  width: 300px;
+  font-size: 0.75em;
+  color: white;
+  padding-top: 20px;
+}
+
 .nav_btn {
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -127,8 +134,15 @@ a {
 .greeting{
   color: white;
   margin-bottom: 50px ;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.concept{
+  color: white;
   padding-top: 20px;
   font-size: 20px;
+  color:red;
 }
 
 .rog_name{
@@ -555,7 +569,10 @@ a {
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
-    width: 120px;
+    width: 100px;
+  }
+  .nav_center{
+    width: 50px;
   }
   .page-heading {
     font-size: 20px;
