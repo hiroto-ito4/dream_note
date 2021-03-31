@@ -362,17 +362,17 @@ a {
     color:red;
     font-size: 20px;
     display: flex;
+    margin-top: 25px;
   }
 
   .detail__message{
     color: white;
-    width: 80%;
     text-align: center;
-    font-size: 20px;
-    line-height: 1.5;
-    white-space: normal;
-    overflow-wrap: break-word;
+    font-size: 18px;
+    white-space: pre-line;
+    overflow-wrap: normal;
     word-break: normal;
+    line-height:1.2;
   }
 
   .work__detail{
@@ -564,6 +564,7 @@ a {
   .work_image{
     width: 60%;
   }
+
 }
 
  /* スマホ表示 */
