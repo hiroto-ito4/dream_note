@@ -67,3 +67,5 @@ gem 'image_processing', '~> 1.2'
 gem 'pry-rails'
 
 gem 'rails-i18n'
+
+gem 'rspec-rails', '~> 4.0.0'
