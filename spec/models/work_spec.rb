@@ -17,39 +17,39 @@ RSpec.describe Work, type: :model do
     end
     context '新規投稿できないとき' do
       it '投稿内容を選択しないと投稿できない' do
-        @work.aaaaa = ''
+        @work.genre_id = 1
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("投稿内容を選択しましょう")
       end
       it 'タイトルが空では登録できない' do
-        @work.aaaaa = ''
+        @work.title = ''
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("アクションのタイトルを入力してください")
       end
       it 'タイトルが50文字より多いと登録できない' do
-        @work.aaaaa = ''
+        @work.title = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあ'
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("アクションのタイトルは50文字以内で入力してください")
       end
       it '内容が空では登録できない' do
-        @work.aaaaa = ''
+        @work.content = ''
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("アクションの内容を入力してください")
       end
       it '内容が250文字より多いと登録できない' do
-        @work.aaaaa = ''
+        @work.content = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあ'
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("アクションの内容は250文字以内で入力してください")
       end
       it '感想が空では登録できない' do
-        @work.aaaaa = ''
+        @work.inpression = ''
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("アクションの感想を入力してください")
       end
       it '感想が250文字より多いと登録できない' do
-        @work.aaaaa = ''
+        @work.inpression = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやいゆえよらりるれろわをんんんあ'
         @work.valid?
-        expect(@work.errors.full_messages).to include("")
+        expect(@work.errors.full_messages).to include("アクションの感想は250文字以内で入力してください")
       end
     end
   end
