@@ -16,3 +16,5 @@ ja:
        title: アクションのタイトル
        content: アクションの内容
        inpression: アクションの感想
+     comment:
+       reaction: コメント
