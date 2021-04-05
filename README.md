@@ -44,6 +44,7 @@ https://dream-note.herokuapp.com/
 
 ◯一覧画面の画像をクリック→投稿詳細画面へ遷移する  
 ◯投稿者本人であれば投稿の編集・削除が可能  
+<img width="1169" alt="DreamNote 編集削除ボタン" src="https://user-images.githubusercontent.com/78402245/113580993-74c51800-9661-11eb-9882-ef8358023e40.png">
 
 ◯投稿詳細画面からコメントの投稿の可能  
 ![トップ→詳細→コメント](https://user-images.githubusercontent.com/78402245/113179987-2e4f7200-928b-11eb-996b-341882c793c2.gif)
